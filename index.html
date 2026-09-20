@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#2f6df6">
+<title>快递照片对单工作台</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;min-height:100vh;min-height:100dvh;
+  display:grid;place-items:center;padding:24px;
+  background:radial-gradient(1200px 600px at 20% -10%,#e8effe 0%,transparent 60%),#f4f6f8;
+  color:#11161d;
+  font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+.card{
+  width:min(420px,100%);background:#fff;border:1px solid #e2e7ed;border-radius:18px;
+  padding:30px 26px;box-shadow:0 2px 6px rgba(15,22,32,.05),0 20px 50px rgba(15,22,32,.10);
+  text-align:center;
+}
+.logo{
+  width:58px;height:58px;margin:0 auto 16px;border-radius:16px;
+  background:linear-gradient(150deg,#2f6df6,#7a5cf0);color:#fff;
+  display:grid;place-items:center;font-size:28px;
+  box-shadow:0 8px 22px rgba(47,109,246,.35);
+}
+h1{margin:0 0 6px;font-size:20px;font-weight:700;letter-spacing:.2px}
+p.sub{margin:0 0 20px;font-size:13.5px;color:#5a6675;line-height:1.65}
+a.btn{
+  display:flex;align-items:center;gap:11px;text-decoration:none;
+  padding:13px 16px;border-radius:13px;margin-bottom:10px;
+  border:1px solid #e2e7ed;background:#fafbfc;color:#11161d;
+  transition:transform .12s,box-shadow .12s,border-color .12s,background .12s;
+}
+a.btn:active{transform:scale(.985)}
+a.btn .ic{
+  width:36px;height:36px;border-radius:10px;flex:none;
+  background:#e7effe;color:#1d4fc0;display:grid;place-items:center;font-size:18px;
+}
+a.btn .tx{text-align:left;flex:1;min-width:0}
+a.btn .tx b{display:block;font-size:15px;font-weight:700}
+a.btn .tx span{display:block;font-size:12px;color:#8e98a6;margin-top:1px}
+a.btn.pri{background:linear-gradient(150deg,#2f6df6,#4a6ff5);border-color:#2f6df6;color:#fff}
+a.btn.pri .ic{background:rgba(255,255,255,.22);color:#fff}
+a.btn.pri .tx span{color:rgba(255,255,255,.78)}
+ul{margin:20px 0 0;padding:14px 0 0;border-top:1px solid #eef2f6;text-align:left;list-style:none;font-size:12.5px;color:#5a6675;display:grid;gap:7px}
+li{display:flex;gap:8px;align-items:flex-start;line-height:1.5}
+li .k{flex:none;color:#2f6df6;font-weight:700}
+@media (prefers-color-scheme:dark){
+  body{background:#10131a;color:#e7ecf3}
+  .card{background:#171b23;border-color:#2b3340;box-shadow:0 20px 50px rgba(0,0,0,.4)}
+  a.btn{background:#1c212a;border-color:#2b3340;color:#e7ecf3}
+  a.btn .ic{background:#1c2c4c;color:#8ab4ff}
+  a.btn.pri .ic{background:rgba(255,255,255,.2);color:#fff}
+  ul{border-top-color:#232a35}
+}
+</style>
+</head>
+<body>
+<main class="card">
+  <div class="logo">⬚</div>
+  <h1>快递照片对单工作台</h1>
+  <p class="sub">照片 ⇄ 运单号文字，一一对应。<br>单文件网页，数据全部留在你手机 / 电脑里。</p>
+
+  <a class="btn pri" href="mobile.html">
+    <span class="ic">📱</span>
+    <span class="tx"><b>手机版</b><span>现场拍照，大按钮，全屏看图</span></span>
+    <span>→</span>
+  </a>
+  <a class="btn" href="desktop.html">
+    <span class="ic">💻</span>
+    <span class="tx"><b>桌面版</b><span>批量拖拽，表格视图，键盘操作</span></span>
+    <span>→</span>
+  </a>
+
+  <ul>
+    <li><span class="k">1</span><span>导入文字数据（粘贴 / CSV / Excel），自动认出运单号列</span></li>
+    <li><span class="k">2</span><span>拍照或导入照片，文件名带单号自动匹配</span></li>
+    <li><span class="k">3</span><span>对不上的用「识别」从图上读单号，或手动配对</span></li>
+    <li><span class="k">⤓</span><span>导出对应表 CSV，或打包照片+表为 ZIP</span></li>
+  </ul>
+</main>
+</body>
+</html>
